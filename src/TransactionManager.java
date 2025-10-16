@@ -22,7 +22,7 @@ public class TransactionManager {
             bufferedReader.close();
         }  catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }g
         return transactions;
 
     }
