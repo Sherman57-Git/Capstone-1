@@ -1,14 +1,15 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Transactions {
+public class Transaction {
     private LocalDate date;
     private LocalTime time;
     private String description;
     private String vendor;
+
     private double amount;
 
-    public Transactions(LocalDate date, LocalTime time, String description,String vendor, double amount) {
+    public Transaction(LocalDate date, LocalTime time, String description,String vendor, double amount) {
         this.date = date;
         this.time = time;
         this.description = description;
@@ -35,7 +36,7 @@ public class Transactions {
     public double getAmount() {
         return amount;
     }
-    public static Transactions fromCsvString(String Line) {
+    public static Transaction fromCsvString(String Line) {
         String[] split = Line.split("\\|");
         LocalDate date = LocalDate.parse(split[0]);
         LocalTime time = LocalTime.parse(split[1]);
@@ -43,7 +44,7 @@ public class Transactions {
         String vendor = split[3];
         double amount = Double.parseDouble(split[4]);
 
-        return new Transactions(date, time, description, vendor, amount);
+        return new Transaction(date, time, description, vendor, amount);
     }
     @Override
     public String toString() {

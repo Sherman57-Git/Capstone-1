@@ -1,11 +1,11 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class Ledger {
-    private List<Transactions> Transactions;
-    private Scanner scanner = new Scanner(System.in);
-
-    public Ledger(List<Transactions> Transactions) {
+    private List<Transaction> Transactions;
+    private final Scanner scanner = new Scanner(System.in);
+    public Ledger(List<Transaction> Transactions) {
         this.Transactions = Transactions;
     }
 
@@ -48,26 +48,28 @@ public class Ledger {
 
     public void showAll() {
         System.out.println("\n All transactions ");
-        for (Transactions trans : reverse(Transactions)) {
+        for (Transaction trans : (Transactions)) {
             System.out.println(trans);
         }
     }
     public void showDeposits() {
         System.out.println("\n Deposits ");
-        for (Transactions trans : reverse(Transactions)) {
+        for (Transaction trans : (Transactions)) {
             if (trans.getAmount() > 0 );
             System.out.println(trans);
         }
     }
     public void showPayments() {
         System.out.println("\n Paymemts  ");
-        for (Transactions trans : reverse(Transactions)) {
+        for (Transaction trans : (Transactions)) {
             if (trans.getAmount() < 0 );
             System.out.println(trans);
         }
     }
     //Report to methods
+    public void showReports() {
 
+    }
 }
 
 
