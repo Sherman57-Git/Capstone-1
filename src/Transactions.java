@@ -49,6 +49,10 @@ public class Transactions {
     public String toString() {
         return date + " | " + time + " | " + description + " | " + vendor + " | " + amount;
     }
+
+    public int toCsv() {
+        return Integer.parseInt(date + " | " + time + " | " + description + " | " + vendor + " | " + amount);
+    }
 }
 
 
