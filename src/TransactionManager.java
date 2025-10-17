@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionManager{
-    public final String fileName = "transactions.csv";
+    public final String fileName = ".idea/File/transactions.csv";
     // Reading Transactions from a file
     public List<Transaction> readTransactions(){
         ArrayList<Transaction> transactions = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
-            bufferedReader.readLine();
             String transactionString;
             while ((transactionString = bufferedReader.readLine()) != null) {
                 String[] transArr = transactionString.split("\\|");
@@ -26,9 +25,11 @@ public class TransactionManager{
     }
 public void addTransaction(Transaction transaction) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+            System.out.println("Writing to: " + new File(fileName).getAbsolutePath());
             writer.write(transaction.toCsv());
             writer.newLine();
-        }catch (IOException e) {
+        }
+        catch (IOException e) {
             System.out.println("ERROR. Cannot write transaction: " + e.getMessage());
         }
 }

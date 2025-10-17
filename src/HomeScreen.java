@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class HomeScreen {
-    private static Scanner scanner = new Scanner(System.in);
-    private static TransactionManager transactionManager = new TransactionManager();
-    static void main(String[] args) {
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final TransactionManager transactionManager = new TransactionManager();
+    public static void main(String[] args) {
        while (true) {
            System.out.println("=   Ledger   =");
            System.out.println("1) Add Deposit");
@@ -53,12 +53,13 @@ public class HomeScreen {
         String description = scanner.nextLine();
         System.out.println("Enter vendor: ");
         String vendor = scanner.nextLine();
+        System.out.println("Enter amount: ");
 
-
-        double amount = Double.parseDouble(scanner.nextLine());
+        double amount;
+        amount = Double.parseDouble(scanner.nextLine());
 
         Transaction newTrans = new Transaction(LocalDate.now(), LocalTime.now(),
-                description, vendor, Math.abs(amount));
+                description, vendor, -Math.abs(amount));
         transactionManager.addTransaction(newTrans);
 
         System.out.println("PAYMENT SAVED !");

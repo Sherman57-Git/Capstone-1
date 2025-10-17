@@ -47,6 +47,7 @@ public class Ledger {
 
     }
 
+
     public void showAll() {
         System.out.println("\n All transactions ");
         for (Transaction trans : Transactions) {
@@ -182,6 +183,7 @@ public class Ledger {
             System.out.printf("Total for '%s' : %.2f\n" , vendorSearch, total);
         }
     }
+
 }
 
 
