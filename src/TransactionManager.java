@@ -4,14 +4,13 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransactionManager {
+public class TransactionManager{
     public final String fileName = "transactions.csv";
-    public List<Transaction> transactionsList() {
-        List<Transaction> transactions = new ArrayList<>();
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+    // Reading Transactions from a file
+    public List<Transaction> readTransactions(){
+        ArrayList<Transaction> transactions = new ArrayList<>();
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             bufferedReader.readLine();
-
             String transactionString;
             while ((transactionString = bufferedReader.readLine()) != null) {
                 String[] transArr = transactionString.split("\\|");
@@ -19,17 +18,23 @@ public class TransactionManager {
                 transactions.add(trans);
 
             }
-            bufferedReader.close();
         }  catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("ERROR. Cannot read transactions: " + e.getMessage());
         }
         return transactions;
 
     }
-
-
-
+public void addTransaction(Transaction transaction) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+            writer.write(transaction.toCsv());
+            writer.newLine();
+        }catch (IOException e) {
+            System.out.println("ERROR. Cannot write transaction: " + e.getMessage());
         }
+}
+
+
+}
 
 
 

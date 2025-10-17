@@ -6,7 +6,6 @@ public class Transaction {
     private LocalTime time;
     private String description;
     private String vendor;
-
     private double amount;
 
     public Transaction(LocalDate date, LocalTime time, String description,String vendor, double amount) {
@@ -43,16 +42,15 @@ public class Transaction {
         String description = split[2];
         String vendor = split[3];
         double amount = Double.parseDouble(split[4]);
-
         return new Transaction(date, time, description, vendor, amount);
     }
     @Override
     public String toString() {
-        return date + " | " + time + " | " + description + " | " + vendor + " | " + amount;
+        return date + "|" + time + "|" + description + "|" + vendor + "|" + amount;
     }
 
-    public int toCsv() {
-        return Integer.parseInt(date + " | " + time + " | " + description + " | " + vendor + " | " + amount);
+    public String toCsv() {
+        return date + "|" + time + "|" + description + "|" + vendor + "|" + amount;
     }
 }
 
