@@ -10,9 +10,9 @@ You can record deposits and expenses, track your balance, and store everything i
 1. [About the Project](#about-the-project)
 2. [Features](#features)
 3. [Getting Started](#getting-started)
-6. [CSV File Example](#csv-file-example)
-7. [Images](#images)
-10. [Author](#author)
+5. [CSV File Example](#csv-file-example)
+6. [Images](#images)
+7. [Author](#author)
 
 ---
 
