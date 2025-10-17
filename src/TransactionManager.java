@@ -22,7 +22,7 @@ public class TransactionManager{
         }
         return transactions;
 
-    }
+    } //ADDING NEW TRANSACTION TO CVS
 public void addTransaction(Transaction transaction) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             System.out.println("Writing to: " + new File(fileName).getAbsolutePath());
