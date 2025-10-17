@@ -9,10 +9,10 @@ public class Ledger {
     public Ledger(List<Transaction> Transactions) {
         this.Transactions = Transactions;
     }
-
+    // building my ledger menu
     public void showMenu() {
         while (true) {
-            System.out.println("\n= Ledger Menu =");
+            System.out.println("\n= THY Ledger Menu =");
             System.out.println("1) Show All Transactions");
             System.out.println("2) Show Deposits");
             System.out.println("3) Show payments");
@@ -76,7 +76,7 @@ public class Ledger {
     //Report to methods
     public void showReports() {
         while (true) {
-            System.out.println("\n= Reports =");
+            System.out.println("\n= THY Reports =");
             System.out.println("1) Month To Date");
             System.out.println("2) Previous Month");
             System.out.println("3) Year To Date");

@@ -8,7 +8,7 @@ public class HomeScreen {
     private static final TransactionManager transactionManager = new TransactionManager();
     public static void main(String[] args) {
        while (true) {
-           System.out.println("=   Ledger   =");
+           System.out.println("=   HELLO !   =");
            System.out.println("1) Add Deposit");
            System.out.println("2) Make payment(Debit)");
            System.out.println("3) Display ledger");
@@ -33,7 +33,8 @@ public class HomeScreen {
                    System.out.println("Invalid.");
            }
        }
-    }
+
+    } //prints out positive payment
     private static void addDeposit() {
         System.out.println("Enter description: ");
         String description = scanner.nextLine();
@@ -47,7 +48,8 @@ public class HomeScreen {
         transactionManager.addTransaction(newTrans);
 
         System.out.println("DEPOSIT ADDED !");
-    }
+
+    } // prints out a negative payment
     private static void makePayment() {
         System.out.println("Enter description: ");
         String description = scanner.nextLine();
@@ -64,7 +66,7 @@ public class HomeScreen {
 
         System.out.println("PAYMENT SAVED !");
 
-    } //Displaying Ledger
+    } //Displaying Ledger menu
     private static void displayLedger() {
         List<Transaction> transactions = transactionManager.readTransactions();
         Ledger leger = new Ledger(transactions);

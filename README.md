@@ -1,6 +1,6 @@
-#LEDGER_README
+#THY_LEDGER_README
 
-Welcome to **Sherman's Ledger** — a simple and beginner-friendly Java app for managing your personal finances!  
+Welcome to **THY Ledger** — It's a simple Java app for managing your personal finances!  
 You can record deposits and expenses, track your balance, and store everything in a CSV file!
 
 ---
@@ -10,19 +10,15 @@ You can record deposits and expenses, track your balance, and store everything i
 1. [About the Project](#about-the-project)
 2. [Features](#features)
 3. [Getting Started](#getting-started)
-4. [Folder Structure](#folder-structure)
-5. [Code Examples](#code-examples)
 6. [CSV File Example](#csv-file-example)
 7. [Images](#images)
-8. [Contributing](#contributing)
-9. [License](#license)
 10. [Author](#author)
 
 ---
 
 ## 🧾 About the Project
 
-**Sherman’s Ledger** helps users manage and view their financial transactions.  
+**THY Ledger** helps users manage and view their financial transactions.  
 It’s a great Java project for learning:
 - How to create and use **objects and attributes**
 - How to **read and write files** in Java
@@ -33,7 +29,7 @@ This project includes **four main Java classes:**
 |-------|--------------|
 | `HomeScreen` | Handles user interaction and displays the main menu |
 | `Transaction` | Represents each individual transaction |
-| `TransactionManager` | Manages adding, reading, and saving transactions |
+| `TransactionManager` | Manages adding, reading, and saving transactions to the file |
 | `Ledger` | Keeps track of all transactions and balance totals |
 
 ---
@@ -42,7 +38,7 @@ This project includes **four main Java classes:**
 
 - 💵 Add deposits or expenses
 - 🧾 View all transactions in order
-- 💾 Save and load data from `transactions.csv`
+- 💾 allows you to save data to a file, load data from a file, and add new data. `transactions.csv`
 - 🧮 Calculate current balance
 - 🧠 Beginner-friendly Java structure
 
@@ -71,10 +67,10 @@ You’ll need:
 
 ## 🖼️ Images
 ![AddDeposit](Screenshot/DepositAdded.jpg)
-
+![AddPayment](Screenshot/Payments%20added.jpg)
 
 ## 👨‍💻 Author
 
-Sherman Turner-Robinson ;D
-📧 sherman@example.com
+Sherman Turner-Robinson 
+📧 shermanrob57@gmail.com
 🌐 Java Capstone Project — Beginner Ledger Application

@@ -7,7 +7,7 @@ public class Transaction {
     private String description;
     private String vendor;
     private double amount;
-// constructors
+// Constructors
     public Transaction(LocalDate date, LocalTime time, String description,String vendor, double amount) {
         this.date = date;
         this.time = time.withNano(0);
@@ -15,7 +15,7 @@ public class Transaction {
         this.vendor = vendor;
         this.amount = amount;
     }
-
+    // Getters
     public LocalDate getDate() {
         return date;
     }
